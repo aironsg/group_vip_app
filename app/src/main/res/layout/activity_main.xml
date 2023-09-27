@@ -43,67 +43,70 @@
     <EditText
         android:id="@+id/editText_firstName"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+
         android:inputType="text"
         style="@style/editText_style"
-        android:text="@string/editText_firstName"
+
+        android:hint="@string/editText_firstName"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_title_app"
         android:layout_marginTop="36dp"
         android:layout_marginHorizontal="16dp"
-         />
+        android:autofillHints="no" />
 
     <EditText
         android:id="@+id/editText_lastName"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+
         android:inputType="text"
         style="@style/editText_style"
-        android:text="@string/editText_lasttName"
+
+        android:hint="@string/editText_lastName"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editText_firstName"
         android:layout_marginTop="22dp"
         android:layout_marginHorizontal="16dp"
 
-        />
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/editText_nameCourse"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+
         android:inputType="text"
         style="@style/editText_style"
-        android:text="@string/editText_courseName"
+        android:hint="@string/editText_courseName"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editText_lastName"
         android:layout_marginTop="22dp"
         android:layout_marginHorizontal="16dp"
-        />
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/editText_phone"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/editText_phone"
+
+        android:hint="@string/editText_phone"
         android:inputType="phone"
         style="@style/editText_style"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editText_nameCourse"
         android:layout_marginTop="22dp"
-        android:layout_marginHorizontal="16dp"/>
+        android:layout_marginHorizontal="16dp"
+        android:importantForAutofill="no" />
 
     <Button
-        android:id="@+id/button_clear"
+        android:id="@+id/btn_clear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/name_button_clear"
         style="@style/button_style"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/button_save"
+        app:layout_constraintRight_toLeftOf="@id/btn_save"
         app:layout_constraintTop_toBottomOf="@id/editText_phone"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         android:layout_marginTop="56dp"
@@ -111,7 +114,7 @@
         />
 
     <Button
-        android:id="@+id/button_save"
+        android:id="@+id/btn_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/name_button_save"
@@ -119,12 +122,12 @@
         tools:layout_editor_absoluteX="258dp"
         tools:layout_editor_absoluteY="500dp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/button_clear"
-        app:layout_constraintTop_toTopOf="@id/button_clear"
+        app:layout_constraintLeft_toRightOf="@id/btn_clear"
+        app:layout_constraintTop_toTopOf="@id/btn_clear"
         android:layout_marginHorizontal="16dp"/>
 
     <Button
-        android:id="@+id/button_finished"
+        android:id="@+id/btn_finished"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/name_button_finished"
@@ -133,7 +136,7 @@
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="42dp"
         style="@style/button_style"
-        app:layout_constraintTop_toBottomOf="@id/button_clear"/>
+        app:layout_constraintTop_toBottomOf="@id/btn_clear"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
