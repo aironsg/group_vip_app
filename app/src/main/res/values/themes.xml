@@ -3,6 +3,24 @@
     <style name="Base.Theme.GroupsVipApp" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/app_bar_color</item>
+    </style>
+
+    <style name="title_app_style">
+        <item name="android:text">@string/title_app</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textSize">22dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="button_style">
+        <item name="android:padding">16dp</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="editText_style">
+        <item name="android:textColor">@color/blue</item>
     </style>
 
     <style name="Theme.GroupsVipApp" parent="Base.Theme.GroupsVipApp" />

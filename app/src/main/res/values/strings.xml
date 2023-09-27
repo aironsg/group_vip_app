@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">Groups Vip App</string>
+    <string name="app_name">Grupo Vip</string>
+    <string name="title_app">Aplicativo Lista Vip Android</string>
+    <string name="name_button_save">SALVAR</string>
+    <string name="name_button_clear">LIMPAR</string>
+    <string name="name_button_finished">FINALIZAR</string>
+    <string name="editText_firstName">Primeiro Nome</string>
+    <string name="editText_lasttName">Segundo nome</string>
+    <string name="editText_courseName">Curso Desejado</string>
+    <string name="editText_phone">Telefone Contato</string>
 </resources>

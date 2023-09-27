@@ -6,13 +6,134 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp"
+
+            />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/text_title_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/title_app_style"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.148" />
+
+    <EditText
+        android:id="@+id/editText_firstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        style="@style/editText_style"
+        android:text="@string/editText_firstName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_title_app"
+        android:layout_marginTop="36dp"
+        android:layout_marginHorizontal="16dp"
+         />
+
+    <EditText
+        android:id="@+id/editText_lastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        style="@style/editText_style"
+        android:text="@string/editText_lasttName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText_firstName"
+        android:layout_marginTop="22dp"
+        android:layout_marginHorizontal="16dp"
+
+        />
+
+    <EditText
+        android:id="@+id/editText_nameCourse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        style="@style/editText_style"
+        android:text="@string/editText_courseName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText_lastName"
+        android:layout_marginTop="22dp"
+        android:layout_marginHorizontal="16dp"
+        />
+
+    <EditText
+        android:id="@+id/editText_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/editText_phone"
+        android:inputType="phone"
+        style="@style/editText_style"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText_nameCourse"
+        android:layout_marginTop="22dp"
+        android:layout_marginHorizontal="16dp"/>
+
+    <Button
+        android:id="@+id/button_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name_button_clear"
+        style="@style/button_style"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/button_save"
+        app:layout_constraintTop_toBottomOf="@id/editText_phone"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        android:layout_marginTop="56dp"
+        android:layout_marginHorizontal="16dp"
+        />
+
+    <Button
+        android:id="@+id/button_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name_button_save"
+        style="@style/button_style"
+        tools:layout_editor_absoluteX="258dp"
+        tools:layout_editor_absoluteY="500dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/button_clear"
+        app:layout_constraintTop_toTopOf="@id/button_clear"
+        android:layout_marginHorizontal="16dp"/>
+
+    <Button
+        android:id="@+id/button_finished"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/name_button_finished"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="583dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="42dp"
+        style="@style/button_style"
+        app:layout_constraintTop_toBottomOf="@id/button_clear"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
