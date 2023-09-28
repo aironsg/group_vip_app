@@ -4,7 +4,6 @@ import java.util.List;
 
 public class StudentModel {
 
-
     private String firstName;
     private String lastName;
 
@@ -15,7 +14,6 @@ public class StudentModel {
     public StudentModel() {
 
     }
-
 
     public StudentModel( String firstName, String lastName, String phoneNumber, CourseModel course) {
 

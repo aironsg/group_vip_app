@@ -18,19 +18,15 @@ import br.com.devairon.model.CourseModel;
 import br.com.devairon.model.StudentModel;
 
 public class MainActivity extends AppCompatActivity {
-
     private StudentModel student = new StudentModel();
     private CourseModel course = new CourseModel();
     private ViewHolder mViewHolder = new ViewHolder();
-
-
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         // assigning ID of the toolbar to a variable
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -45,9 +41,6 @@ public class MainActivity extends AppCompatActivity {
         mViewHolder.buttonSave = findViewById(R.id.btn_save);
         mViewHolder.buttonClear = findViewById(R.id.btn_clear);
         mViewHolder.buttonFinished = findViewById(R.id.btn_finished);
-
-
-
 
         mViewHolder.buttonClear.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,20 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-//    @Override
-//    protected void onResume() {
-//        super.onResume();
-//        mViewHolder.buttonSave.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if(student != null){
-//                    saveStudent();
-//                }
-//            }
-//        });
-//    }
-//
-    private void saveStudent(){
+    private void saveStudent() {
         student.setFirstName(mViewHolder.editFirstName.getText().toString());
         student.setLastName(mViewHolder.editLastName.getText().toString());
         course.setNameCourse(mViewHolder.editNameCourse.getText().toString());
@@ -98,10 +78,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-//
-//
 
-    private void clearEditText(){
+    private void clearEditText() {
         mViewHolder.editFirstName.setText("");
         mViewHolder.editLastName.setText("");
         mViewHolder.editNameCourse.setText("");
@@ -109,9 +87,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
-    private class ViewHolder{
+    private class ViewHolder {
         EditText editFirstName;
         EditText editLastName;
         EditText editNameCourse;
@@ -119,8 +95,6 @@ public class MainActivity extends AppCompatActivity {
         Button buttonSave;
         Button buttonClear;
         Button buttonFinished;
-
-
 
 
     }

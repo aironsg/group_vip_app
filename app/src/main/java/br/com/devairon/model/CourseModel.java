@@ -1,21 +1,17 @@
 package br.com.devairon.model;
 
+import androidx.annotation.NonNull;
+
 public class CourseModel {
-
-
     private String nameCourse;
-
 
     public CourseModel() {
 
     }
-
     public CourseModel(String nameCourse) {
 
         this.nameCourse = nameCourse;
     }
-
-
     public String getNameCourse() {
         return nameCourse;
     }
