@@ -3,26 +3,20 @@ package br.com.devairon.model;
 import java.util.List;
 
 public class StudentModel {
-
     private String firstName;
     private String lastName;
-
     private String phoneNumber;
-
     private CourseModel course;
-
     public StudentModel() {
 
     }
 
     public StudentModel( String firstName, String lastName, String phoneNumber, CourseModel course) {
-
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
         this.course = course;
     }
-
 
     public String getFirstName() {
         return firstName;
