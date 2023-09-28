@@ -1,4 +1,11 @@
 package br.com.devairon.repository;
 
-public class CourseRepository {
+import br.com.devairon.model.CourseModel;
+
+public interface CourseRepository {
+    public void save(CourseModel course);
+    public void delete(CourseModel course);
+    public CourseModel findById(Long id);
+    public Iterable<CourseModel> findAll();
+
 }
