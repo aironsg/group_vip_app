@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
     private CourseModel course = new CourseModel();
     private ViewHolder mViewHolder = new ViewHolder();
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
