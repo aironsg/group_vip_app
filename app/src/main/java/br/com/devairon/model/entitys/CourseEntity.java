@@ -1,14 +1,12 @@
-package br.com.devairon.model;
+package br.com.devairon.model.entitys;
 
-import androidx.annotation.NonNull;
-
-public class CourseModel {
+public class CourseEntity {
     private String nameCourse;
 
-    public CourseModel() {
+    public CourseEntity() {
 
     }
-    public CourseModel(String nameCourse) {
+    public CourseEntity(String nameCourse) {
 
         this.nameCourse = nameCourse;
     }
