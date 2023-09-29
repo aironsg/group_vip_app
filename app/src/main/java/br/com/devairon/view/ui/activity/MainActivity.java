@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
     private boolean isFieldValid = false;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,11 +62,18 @@ public class MainActivity extends AppCompatActivity {
                     studentController.save(getDataStudent(), getApplicationContext());
                     Toast.makeText(getApplicationContext(), "Estudante Salvo com sucesso!", Toast.LENGTH_LONG).show();
                     clearEditText();
-                }else{
+                } else {
                     Toast.makeText(getApplicationContext(), "Error! Dados Incompletos", Toast.LENGTH_LONG).show();
                 }
             }
         });
+
+        showStudent();
+    }
+
+    private void showStudent() {
+        student = studentController.findStudent(getApplicationContext());
+        Toast.makeText(getApplicationContext(), student.toString(), Toast.LENGTH_LONG).show();
 
     }
 

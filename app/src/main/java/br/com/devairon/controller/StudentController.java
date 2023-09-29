@@ -2,7 +2,7 @@ package br.com.devairon.controller;
 
 import android.content.Context;
 
-import br.com.devairon.model.data.local.localDataSource.StudentData;
+import br.com.devairon.model.data.local.localDataSource.StudentPreferenceData;
 import br.com.devairon.model.entitys.CourseEntity;
 import br.com.devairon.model.entitys.StudentEntity;
 import br.com.devairon.model.repository.StudentRepository;
@@ -14,19 +14,25 @@ public class StudentController implements StudentRepository{
     private StudentEntity student = new StudentEntity();
     private CourseEntity course = new CourseEntity();
 
-    private StudentData data;
+    private StudentPreferenceData data;
 
     @Override
     public void save(StudentEntity student, Context context) {
-        data = StudentData.getInstance(student, context);
+        data = StudentPreferenceData.getInstance(context);
         data.saveStudent(student);
-
-
     }
 
     @Override
     public StudentEntity findById(Long id) {
+
         return null;
+    }
+
+    @Override
+    public StudentEntity findStudent(Context context) {
+        data = StudentPreferenceData.getInstance(context);
+        student = data.getStudent();
+        return student;
     }
 
     @Override
