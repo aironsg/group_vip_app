@@ -1,4 +1,4 @@
-package br.com.devairon.utils.constants;
+package br.com.devairon.view.utils.constants;
 
 public class Constants {
     public static final String NAME_PREFERENCE = "group_vip_preference";

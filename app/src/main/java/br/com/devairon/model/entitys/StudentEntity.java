@@ -1,17 +1,15 @@
-package br.com.devairon.model;
+package br.com.devairon.model.entitys;
 
-import java.util.List;
-
-public class StudentModel {
+public class StudentEntity {
     private String firstName;
     private String lastName;
     private String phoneNumber;
-    private CourseModel course;
-    public StudentModel() {
+    private CourseEntity course;
+    public StudentEntity() {
 
     }
 
-    public StudentModel( String firstName, String lastName, String phoneNumber, CourseModel course) {
+    public StudentEntity(String firstName, String lastName, String phoneNumber, CourseEntity course) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
@@ -42,11 +40,11 @@ public class StudentModel {
         this.phoneNumber = phoneNumber;
     }
 
-    public CourseModel getCourse() {
+    public CourseEntity getCourse() {
         return course;
     }
 
-    public void setCourse(CourseModel course) {
+    public void setCourse(CourseEntity course) {
         this.course = course;
     }
 

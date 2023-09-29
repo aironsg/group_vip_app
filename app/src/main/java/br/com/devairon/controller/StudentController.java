@@ -2,22 +2,22 @@ package br.com.devairon.controller;
 
 import android.content.Context;
 
-import br.com.devairon.data.localDataSource.StudentData;
-import br.com.devairon.model.CourseModel;
-import br.com.devairon.model.StudentModel;
-import br.com.devairon.repository.StudentRepository;
+import br.com.devairon.model.data.local.localDataSource.StudentData;
+import br.com.devairon.model.entitys.CourseEntity;
+import br.com.devairon.model.entitys.StudentEntity;
+import br.com.devairon.model.repository.StudentRepository;
 
 public class StudentController implements StudentRepository{
 
 
     private StudentRepository repository;
-    private StudentModel student = new StudentModel();
-    private CourseModel course = new CourseModel();
+    private StudentEntity student = new StudentEntity();
+    private CourseEntity course = new CourseEntity();
 
     private StudentData data;
 
     @Override
-    public void save(StudentModel student, Context context) {
+    public void save(StudentEntity student, Context context) {
         data = StudentData.getInstance(student, context);
         data.saveStudent(student);
 
@@ -25,7 +25,7 @@ public class StudentController implements StudentRepository{
     }
 
     @Override
-    public StudentModel findById(Long id) {
+    public StudentEntity findById(Long id) {
         return null;
     }
 
@@ -35,17 +35,17 @@ public class StudentController implements StudentRepository{
     }
 
     @Override
-    public void update(StudentModel student) {
+    public void update(StudentEntity student) {
 
     }
 
     @Override
-    public Iterable<StudentModel> findAll() {
+    public Iterable<StudentEntity> findAll() {
         return null;
     }
 
     @Override
-    public Iterable<StudentModel> findByCourse(Long courseId) {
+    public Iterable<StudentEntity> findByCourse(Long courseId) {
         return null;
     }
 

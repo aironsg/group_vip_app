@@ -1,33 +1,32 @@
-package br.com.devairon.data.localDataSource;
+package br.com.devairon.model.data.local.localDataSource;
 
-import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import br.com.devairon.model.StudentModel;
-import br.com.devairon.utils.constants.Constants;
+import br.com.devairon.model.entitys.StudentEntity;
+import br.com.devairon.view.utils.constants.Constants;
 
 public class StudentData {
     SharedPreferences preferences;
 
     private static StudentData instance;
-    StudentModel student;
-    public StudentData(StudentModel student) {
+    StudentEntity student;
+    public StudentData(StudentEntity student) {
         this.student = student;
     }
 
-    private StudentData(StudentModel student,Context context) {
+    private StudentData(StudentEntity student, Context context) {
           preferences = context.getSharedPreferences(Constants.STUDENT_PREFERENCE, Context.MODE_PRIVATE);
        }
 
-    public static synchronized StudentData getInstance(StudentModel student, Context context) {
+    public static synchronized StudentData getInstance(StudentEntity student, Context context) {
             if (instance == null) {
                 instance = new StudentData(student,context);
             }
             return instance;
         }
 
-    public void saveStudent(StudentModel student){
+    public void saveStudent(StudentEntity student){
 
         SharedPreferences.Editor save = preferences.edit();
         save.putString("firtName", student.getFirstName());

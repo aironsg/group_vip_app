@@ -1,4 +1,4 @@
-package br.com.devairon.exceptions;
+package br.com.devairon.view.exceptions;
 
 public class StudentNullException extends Exception {
     private String message;

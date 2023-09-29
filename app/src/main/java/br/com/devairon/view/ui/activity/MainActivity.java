@@ -1,9 +1,8 @@
-package br.com.devairon.view;
+package br.com.devairon.view.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -13,13 +12,12 @@ import android.widget.Toast;
 
 import br.com.devairon.R;
 import br.com.devairon.controller.StudentController;
-import br.com.devairon.model.CourseModel;
-import br.com.devairon.model.StudentModel;
-import br.com.devairon.utils.constants.Constants;
+import br.com.devairon.model.entitys.CourseEntity;
+import br.com.devairon.model.entitys.StudentEntity;
 
 public class MainActivity extends AppCompatActivity {
-    private StudentModel student = new StudentModel();
-    private CourseModel course = new CourseModel();
+    private StudentEntity student = new StudentEntity();
+    private CourseEntity course = new CourseEntity();
     private ViewHolder mViewHolder = new ViewHolder();
     private StudentController studentController = new StudentController();
 
@@ -80,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         mViewHolder.editPhoneNumber.setText("");
     }
 
-    private StudentModel getDataStudent() {
+    private StudentEntity getDataStudent() {
 
         student.setFirstName(mViewHolder.editFirstName.getText().toString());
         student.setLastName(mViewHolder.editLastName.getText().toString());
@@ -91,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private boolean checkAllFields() {
-        StudentModel studentData = getDataStudent();
+        StudentEntity studentData = getDataStudent();
         if (TextUtils.isEmpty(studentData.getFirstName())) {
             mViewHolder.editFirstName.setError("Campo Obrigatorio");
             return false;
