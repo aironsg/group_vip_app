@@ -27,5 +27,12 @@
 
     </style>
 
+    <style name="shapeAppearanceMediumComponent" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">16dp</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="android:buttonCornerRadius">16dp</item>
+    </style>
+
     <style name="Theme.GroupsVipApp" parent="Base.Theme.GroupsVipApp" />
 </resources>

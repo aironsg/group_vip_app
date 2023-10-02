@@ -16,8 +16,9 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
+            style="@style/ShapeAppearance.Material3.MediumComponent"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="120dp"
             android:background="?attr/colorPrimary"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
@@ -54,6 +55,7 @@
         android:layout_marginTop="36dp"
         android:layout_marginHorizontal="16dp"
         android:autofillHints="no" />
+
 
     <EditText
         android:id="@+id/editText_lastName"

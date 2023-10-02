@@ -16,10 +16,10 @@ import br.com.devairon.model.entitys.CourseEntity;
 import br.com.devairon.model.entitys.StudentEntity;
 
 public class MainActivity extends AppCompatActivity {
-    private StudentEntity student = new StudentEntity();
-    private CourseEntity course = new CourseEntity();
+    private StudentEntity mStudent = new StudentEntity();
+    private CourseEntity mCourse = new CourseEntity();
     private ViewHolder mViewHolder = new ViewHolder();
-    private StudentController studentController = new StudentController();
+    private StudentController mStudentController = new StudentController();
 
     private boolean isFieldValid = false;
 
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 isFieldValid = checkAllFields();
                 if (isFieldValid) {
-                    studentController.save(getDataStudent(), getApplicationContext());
+                    mStudentController.save(getDataStudent(), getApplicationContext());
                     Toast.makeText(getApplicationContext(), "Estudante Salvo com sucesso!", Toast.LENGTH_LONG).show();
                     clearEditText();
                 } else {
@@ -72,8 +72,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showStudent() {
-        student = studentController.findStudent(getApplicationContext());
-        Toast.makeText(getApplicationContext(), student.toString(), Toast.LENGTH_LONG).show();
+        mStudent = mStudentController.findStudent(getApplicationContext());
+        Toast.makeText(getApplicationContext(), mStudent.toString(), Toast.LENGTH_LONG).show();
 
     }
 
@@ -86,12 +86,12 @@ public class MainActivity extends AppCompatActivity {
 
     private StudentEntity getDataStudent() {
 
-        student.setFirstName(mViewHolder.editFirstName.getText().toString());
-        student.setLastName(mViewHolder.editLastName.getText().toString());
-        course.setNameCourse(mViewHolder.editNameCourse.getText().toString());
-        student.setCourse(course);
-        student.setPhoneNumber(mViewHolder.editPhoneNumber.getText().toString());
-        return student;
+        mStudent.setFirstName(mViewHolder.editFirstName.getText().toString());
+        mStudent.setLastName(mViewHolder.editLastName.getText().toString());
+        mCourse.setNameCourse(mViewHolder.editNameCourse.getText().toString());
+        mStudent.setCourse(mCourse);
+        mStudent.setPhoneNumber(mViewHolder.editPhoneNumber.getText().toString());
+        return mStudent;
     }
 
     private boolean checkAllFields() {
